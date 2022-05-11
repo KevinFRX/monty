@@ -1,8 +1,10 @@
 #include "monty.h"
 
 /**
- * free_all - frees all allocated memory
- * @stack: pointer to linked list
+ * free_stack - frees the stack
+ * @stack: the stack
+ *
+ * Return: void
  */
 void free_stack(stack_t *stack)
 {

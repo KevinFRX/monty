@@ -1,7 +1,13 @@
 #include "monty.h"
 
 global_variables_t gv;
-
+/**
+ * main - Entry point
+ * @argc: count of arguments
+ * @argv: array of the strings
+ *
+ * Return: always 0
+ */
 int main(int argc, char const *argv[])
 {
 

@@ -1,0 +1,4 @@
+
+asds
+push 12 k
+pall

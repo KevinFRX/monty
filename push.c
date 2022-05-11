@@ -1,6 +1,12 @@
 #include "monty.h"
 #include <ctype.h>
 
+/**
+ * is_number - checks if the string is a number
+ * @n: the string/number
+ *
+ * Return: -1 if is not a number 0 if it is
+ */
 int is_number(char *n)
 {
 	int i = 0;
@@ -15,6 +21,14 @@ int is_number(char *n)
 	}
 	return (0);
 }
+
+/**
+ * _push - pushes an element to the stack
+ * @stack: the stack
+ * @line: the line where the opcode is
+ *
+ * Return: void
+ */
 void _push(stack_t **stack, unsigned int line)
 {
 	stack_t *node, *end = *stack;
