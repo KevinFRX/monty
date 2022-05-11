@@ -1,4 +1,5 @@
-
-asds
-push 12 k
+push 1
+push 2
+push 3
 pall
+pint

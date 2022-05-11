@@ -13,7 +13,7 @@ void read_file(void)
 	unsigned int line = 0;
 	stack_t *stack = NULL;
 	instruction_t op_matrix[] = {
-		{"push", _push}, {"pall", _pall},
+		{"push", _push}, {"pall", _pall}, {"pint", _pint},
 		{NULL, NULL}
 	};
 	while (getline(&contents, &len, gv.input_file) != -1)
