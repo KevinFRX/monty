@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "main.h"
 
 /**
  * free_all - frees all allocated memory
@@ -6,14 +6,14 @@
  */
 void free_all(stack_t *stack)
 {
-	stack_t *delete = stack;
+	stack_t *remove = stack;
 
 	while (stack)
 	{
 		stack = stack->next;
-		free(delete);
-		delete = stack;
+		free(remove);
+		remove = stack;
 	}
-	free(mem.token);
-	fclose(mem.pScript);
+	free(gv.token);
+	fclose(gv.input_file);
 }
