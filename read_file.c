@@ -19,7 +19,7 @@ void read_file(void)
 	while (getline(&contents, &len, gv.input_file) != -1)
 	{
 		line++;
-		gv.token = strtok(contents, "\n");
+		gv.token = strtok(contents, " \n");
 
 		if (gv.token == NULL || gv.token[0] == '#')
 			continue;
@@ -27,7 +27,7 @@ void read_file(void)
 		{
 			if (strcmp(op_matrix[i].opcode, gv.token) == 0)
 			{
-				gv.n = strtok(NULL, "\n");
+				gv.n = strtok(NULL, " \n");
 				op_matrix[i].f(&stack, line);
 				break;
 			}

@@ -1,11 +1,25 @@
 #include "monty.h"
 #include <ctype.h>
 
+int is_number(char *n)
+{
+	int i = 0;
+
+	if (n[0] == '-')
+		i = 1;
+
+	for (; n[i] != '\0'; i++)
+	{
+		if (n[i] < 48 || n[i] > 57)
+			return (-1);
+	}
+	return (0);
+}
 void _push(stack_t **stack, unsigned int line)
 {
 	stack_t *node, *end = *stack;
 
-	if (gv.n == NULL || !(isdigit(gv.n)))
+	if (gv.n == NULL || is_number(gv.n) == -1)
 	{
 		free_stack(*stack);
 		fprintf(stderr, "L%u: usage: push integer\n", line);
