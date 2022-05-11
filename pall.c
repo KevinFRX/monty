@@ -8,6 +8,6 @@ void _pall(stack_t **stack, unsigned int line)
 	while (cnode != NULL)
 	{
 		printf("%d\n", cnode->n);
-		cnode = cnode->next
+		cnode = cnode->next;
 	}
 }

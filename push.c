@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <ctype.h>
 
 void _push(stack_t **stack, unsigned int line)
 {
@@ -7,7 +8,7 @@ void _push(stack_t **stack, unsigned int line)
 	if (gv.n == NULL || !(isdigit(gv.n)))
 	{
 		free_stack(*stack);
-		fprintf(stderr, "L%u: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line);
 		exit(EXIT_FAILURE);
 	}
 
