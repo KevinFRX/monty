@@ -4,7 +4,7 @@
 void _push(stack_t **stack, unsigned int line)
 {
 	stack_t *node, *end = *stack;
-	
+
 	if (gv.n == NULL || !(isdigit(gv.n)))
 	{
 		free_stack(*stack);
