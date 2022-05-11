@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 global_variables_t gv;
 
