@@ -21,5 +21,5 @@ void _rotr(stack_t **stack, unsigned int line)
 		cnode->prev->next = NULL;
 		cnode->prev = NULL;
 		*stack = cnode;
-	}		
+	}
 }
