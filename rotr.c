@@ -9,21 +9,17 @@
  */
 void _rotr(stack_t **stack, unsigned int line)
 {
-	int aux;
 	stack_t *cnode = *stack;
 	(void)line;
 
 	if (*stack && (*stack)->next)
 	{
 		while (cnode->next)
-			;
-		aux = cnode->n;
-		cnode = *stack;
-		while (cnode->next)
-		{
-			cnode->next->n = cnode->n;
 			cnode = cnode->next;
-		}
-		(*stack)->n = aux;
-	}
+		cnode->next = *stack;
+		(*stack)->prev = cnode;
+		cnode->prev->next = NULL;
+		cnode->prev = NULL;
+		*stack = cnode;
+	}		
 }
