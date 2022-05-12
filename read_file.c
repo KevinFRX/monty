@@ -15,7 +15,7 @@ void read_file(void)
 	instruction_t op_matrix[] = {
 		{"push", _push}, {"pall", _pall}, {"pint", _pint}, {"pop", _pop},
 		{"swap", _swap}, {"add", _add}, {"nop", _nop}, {"sub", _sub},
-		{"div", _div},
+		{"div", _div}, {"mul", _mul},
 		{NULL, NULL}
 	};
 	while (getline(&contents, &len, gv.input_file) != -1)
