@@ -9,7 +9,7 @@
  */
 void _swap(stack_t **stack, unsigned int line)
 {
-	stack_t *aux = (*stack)->next;
+	stack_t *aux;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -17,6 +17,7 @@ void _swap(stack_t **stack, unsigned int line)
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
+	aux = (*stack)->next;
 	(*stack)->next = aux->next;
 	(*stack)->prev = aux;
 	aux->next = *stack;
