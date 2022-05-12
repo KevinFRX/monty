@@ -14,7 +14,7 @@ void _pstr(stack_t **stack, unsigned int line)
 
 	while (cnode != NULL && cnode->n != 0)
 	{
-		if (cnode->n > 0 && cnode->n < 256)
+		if (cnode->n > 31 && cnode->n < 128)
 			printf("%c", cnode->n);
 		cnode = cnode->next;
 	}
