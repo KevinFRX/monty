@@ -10,5 +10,5 @@ void _queue(stack_t **stack, unsigned int line)
 	(void)stack;
 	(void)line;
 
-	mem.mode = queue_mode;
+	gv.mode = queue_mode;
 }

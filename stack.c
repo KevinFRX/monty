@@ -10,5 +10,5 @@ void _stack(stack_t **stack, unsigned int line)
 	(void)stack;
 	(void)line;
 
-	mem.mode = stack_mode;
+	gv.mode = stack_mode;
 }
